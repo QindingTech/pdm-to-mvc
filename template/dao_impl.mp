@@ -24,9 +24,10 @@ import java.util.Date;
 public class @@=$groupName=@@DaoImpl extends BaseDaoImpl implements @@=$groupName=@@Dao{
 
     @Override
-    public void save@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
+    public void save@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String siteId,String handler){
         @@=$groupName.uncapitalize=@@.setVersion(1L);
         @@=$groupName.uncapitalize=@@.setDeleted(0L);
+        @@=$groupName.uncapitalize=@@.setSiteId(siteId);
         @@=$groupName.uncapitalize=@@.setUpdatedBy(handler);
         @@=$groupName.uncapitalize=@@.setUpdatedAt(new Date());
         this.saveEntity(@@=$groupName.uncapitalize=@@);
@@ -34,9 +35,10 @@ public class @@=$groupName=@@DaoImpl extends BaseDaoImpl implements @@=$groupNam
     }
 
     @Override
-    public void update@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
+    public void update@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String siteId,String handler){
         @@=$groupName.uncapitalize=@@.setVersion(@@=$groupName.uncapitalize=@@.getVersion()+1L);
         @@=$groupName.uncapitalize=@@.setDeleted(0L);
+        @@=$groupName.uncapitalize=@@.setSiteId(siteId);
         @@=$groupName.uncapitalize=@@.setUpdatedBy(handler);
         @@=$groupName.uncapitalize=@@.setUpdatedAt(new Date());
         this.updateEntity(@@=$groupName.uncapitalize=@@);
@@ -44,13 +46,13 @@ public class @@=$groupName=@@DaoImpl extends BaseDaoImpl implements @@=$groupNam
     }
 
     @Override
-    public void saveOrUpdate@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
+    public void saveOrUpdate@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String siteId,String handler){
             if(@@=$groupName.uncapitalize=@@.getId()==null||@@=$groupName.uncapitalize=@@.getId().trim().isEmpty()){
                 //new
-                this.save@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@,handler);
+                this.save@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@,siteId,handler);
             }else{
                 //update
-                this.update@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@,handler);
+                this.update@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@,siteId,handler);
             }
         }
 
@@ -58,9 +60,10 @@ public class @@=$groupName=@@DaoImpl extends BaseDaoImpl implements @@=$groupNam
      * change deleted flag to 1.
      */
     @Override
-    public void delete@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
+    public void delete@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String siteId,String handler){
         @@=$groupName.uncapitalize=@@.setDeleted(1L);
         @@=$groupName.uncapitalize=@@.setVersion(@@=$groupName.uncapitalize=@@.getVersion()+1L);
+        @@=$groupName.uncapitalize=@@.setSiteId(siteId);
         @@=$groupName.uncapitalize=@@.setUpdatedBy(handler);
         @@=$groupName.uncapitalize=@@.setUpdatedAt(new Date());
         this.updateEntity(@@=$groupName.uncapitalize=@@);
