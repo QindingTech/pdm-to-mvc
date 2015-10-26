@@ -1,0 +1,1 @@
+Generate JPA entity and DAO layer from PowerDesigner PDM file.
