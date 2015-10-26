@@ -24,22 +24,45 @@ import java.util.Date;
 public class @@=$groupName=@@DaoImpl extends BaseDaoImpl implements @@=$groupName=@@Dao{
 
     @Override
-    public void save@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@){
+    public void save@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
+        @@=$groupName.uncapitalize=@@.setVersion(1L);
+        @@=$groupName.uncapitalize=@@.setDeleted(0L);
+        @@=$groupName.uncapitalize=@@.setUpdatedBy(handler);
+        @@=$groupName.uncapitalize=@@.setUpdatedAt(new Date());
         this.saveEntity(@@=$groupName.uncapitalize=@@);
         this.saveArc(@@=$groupName.uncapitalize=@@);
     }
 
     @Override
-    public void update@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@){
+    public void update@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
+        @@=$groupName.uncapitalize=@@.setVersion(@@=$groupName.uncapitalize=@@.getVersion()+1L);
+        @@=$groupName.uncapitalize=@@.setDeleted(0L);
+        @@=$groupName.uncapitalize=@@.setUpdatedBy(handler);
+        @@=$groupName.uncapitalize=@@.setUpdatedAt(new Date());
         this.updateEntity(@@=$groupName.uncapitalize=@@);
         this.saveArc(@@=$groupName.uncapitalize=@@);
     }
+
+    @Override
+    public void saveOrUpdate@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
+            if(@@=$groupName.uncapitalize=@@.getId()==null||@@=$groupName.uncapitalize=@@.getId().trim().isEmpty()){
+                //new
+                this.save@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@,handler);
+            }else{
+                //update
+                this.update@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@,handler);
+            }
+        }
+
     /**
      * change deleted flag to 1.
      */
     @Override
-    public void delete@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@){
+    public void delete@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
         @@=$groupName.uncapitalize=@@.setDeleted(1L);
+        @@=$groupName.uncapitalize=@@.setVersion(@@=$groupName.uncapitalize=@@.getVersion()+1L);
+        @@=$groupName.uncapitalize=@@.setUpdatedBy(handler);
+        @@=$groupName.uncapitalize=@@.setUpdatedAt(new Date());
         this.updateEntity(@@=$groupName.uncapitalize=@@);
         this.saveArc(@@=$groupName.uncapitalize=@@);
     }

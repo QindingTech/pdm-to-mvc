@@ -81,7 +81,7 @@ end
 
 $year = Time.now.year
 
-pdmPath = '/Users/justin/Documents/Projects/qindingtech/new-energy-management-platform/trunk/0002-Design/Database/platform/AMP_AUTH.pdm'
+pdmPath = '/Users/justin/Documents/Projects/qindingtech/new-energy-management-platform/trunk/0002-Design/Database/platform/auth.pdm'
 
 entityFolder = 'target/java/com/qindingtech/entity/'
 dtoFolder = 'target/java/com/qindingtech/data/dto/'

@@ -20,7 +20,7 @@ import java.util.Date;
 * service
 */
 @Service("@@=$groupName.uncapitalize=@@Service")
-public class @@=$groupName=@@ServiceImpl implements @@=$groupName=@@Service{
+public class @@=$groupName=@@ServiceImpl extends BaseServiceImpl implements @@=$groupName=@@Service{
     @Resource
     private @@=$groupName=@@Dao @@=$groupName.uncapitalize=@@Dao;
 }

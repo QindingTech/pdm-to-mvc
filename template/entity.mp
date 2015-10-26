@@ -19,8 +19,11 @@ import java.util.Date;
 */
 @Entity
 @Table(name="@@=$tableName=@@")
-public class @@=$entityName=@@ implements Serializable{
+public class @@=$entityName=@@ extends BaseEntity implements Serializable{
 @@> for attribute in $columnArray
+@@> if(attribute.name=='deleted'||attribute.name=='version'||attribute.name=='updatedBy'||attribute.name=='updatedAt')
+@@> next
+@@> end
     /**
     * @@=attribute.comment=@@
     */
