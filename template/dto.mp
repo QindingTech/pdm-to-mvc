@@ -37,7 +37,7 @@ public class @@=$entityName=@@Dto extends BaseDto implements Serializable{
 
 @@> end
 
-    public static @@=$entityName=@@Dto map(@@=$entityName=@@ entity){
+    public static @@=$entityName=@@Dto entity2dto(@@=$entityName=@@ entity){
         @@=$entityName=@@Dto @@=$entityName.uncapitalize=@@Dto = new @@=$entityName=@@Dto();
 @@> for attribute in $columnArray
         @@=$entityName.uncapitalize=@@Dto.set@@=attribute.name.capitalizeFirst=@@(entity.get@@=attribute.name.capitalizeFirst=@@());
@@ -45,10 +45,26 @@ public class @@=$entityName=@@Dto extends BaseDto implements Serializable{
         return @@=$entityName.uncapitalize=@@Dto;
     }
 
-    public static List<@@=$entityName=@@Dto> map(List<@@=$entityName=@@> entities){
+    public static List<@@=$entityName=@@Dto> entity2dto(List<@@=$entityName=@@> entities){
         List<@@=$entityName=@@Dto> list = new ArrayList<>();
         for(@@=$entityName=@@ entity:entities){
-            list.add(map(entity));
+            list.add(entity2dto(entity));
+        }
+        return list;
+    }
+
+    public static @@=$entityName=@@ dto2entity(@@=$entityName=@@Dto dto){
+            @@=$entityName=@@ @@=$entityName.uncapitalize=@@ = new @@=$entityName=@@();
+@@> for attribute in $columnArray
+            @@=$entityName.uncapitalize=@@.set@@=attribute.name.capitalizeFirst=@@(dto.get@@=attribute.name.capitalizeFirst=@@());
+@@> end
+            return @@=$entityName.uncapitalize=@@;
+        }
+
+    public static List<@@=$entityName=@@> dto2entity(List<@@=$entityName=@@Dto> dtos){
+        List<@@=$entityName=@@> list = new ArrayList<>();
+        for(@@=$entityName=@@Dto dto:dtos){
+            list.add(dto2entity(dto));
         }
         return list;
     }
