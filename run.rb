@@ -18,6 +18,31 @@ class String
   end
 end
 
+class ColumnClass
+  def initialize(type, name, code, comment)
+    @type=type
+    @name=name
+    @code=code
+    @comment=comment
+  end
+
+  def type
+    @type
+  end
+
+  def name
+    @name
+  end
+
+  def code
+    @code
+  end
+
+  def comment
+    @comment
+  end
+end
+
 # convert database type to Java type
 def getType(dbType)
   type = dbType.downcase
@@ -51,30 +76,6 @@ def createDir(path)
   end
 end
 
-class ColumnClass
-  def initialize(type, name, code, comment)
-    @type=type
-    @name=name
-    @code=code
-    @comment=comment
-  end
-
-  def type
-    @type
-  end
-
-  def name
-    @name
-  end
-
-  def code
-    @code
-  end
-
-  def comment
-    @comment
-  end
-end
 
 $year = Time.now.year
 

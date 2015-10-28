@@ -47,7 +47,7 @@ public class @@=$groupName=@@DaoImpl extends BaseDaoImpl implements @@=$groupNam
 
     @Override
     public @@=$groupName.capitalizeFirst=@@ saveOrUpdate@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
-            if(@@=$groupName.uncapitalize=@@.getId()==null||@@=$groupName.uncapitalize=@@.getId().trim().isEmpty()){
+        if (CommonUtility.isEmpty(@@=$groupName.uncapitalize=@@.getId())) {
                 //new
                 return this.save@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@,handler);
             }else{
@@ -56,9 +56,6 @@ public class @@=$groupName=@@DaoImpl extends BaseDaoImpl implements @@=$groupNam
             }
         }
 
-    /**
-     * change deleted flag to 1.
-     */
     @Override
     public void delete@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
         @@=$groupName.uncapitalize=@@.setDeleted(1L);
@@ -69,18 +66,18 @@ public class @@=$groupName=@@DaoImpl extends BaseDaoImpl implements @@=$groupNam
         this.saveArc(@@=$groupName.uncapitalize=@@);
     }
 
-    /**
-     * change deleted flag to 1.
-     */
     @Override
     public boolean delete@@=$groupName.capitalizeFirst=@@(String id, String handler) {
-            if(id==null||id.trim().isEmpty()){
-                @@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@ =getEntityById(@@=$groupName.capitalizeFirst=@@.class,id);
-                if(@@=$groupName.uncapitalize=@@!=null){
-                    delete@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@,handler);
-                    return true;
-                }
-            }return false;
+        if(CommonUtility.isEmpty(id)) return false;
+        @@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@ = getEntityById(@@=$groupName.capitalizeFirst=@@.class, id);
+        if (@@=$groupName.uncapitalize=@@==null) return false;
+        try{
+            delete@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@, handler);
+            return true;
+        }catch (Exception e){
+            logger.error(e);
+            return false;
+        }
     }
 
     protected void saveArc(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@){
