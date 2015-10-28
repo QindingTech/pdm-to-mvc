@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98293f9b-296a-4f29-a5b0-a6cdaf9a068a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config_webclerk.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config_webclerk.yml" afterPath="$PROJECT_DIR$/config_webclerk.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/dao.mp" afterPath="$PROJECT_DIR$/template/dao.mp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pdm-to-mvc.iws" />
@@ -17,7 +18,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/pdm-to-mvc@run.coverage" NAME="run Coverage Results" MODIFIED="1446013967720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="pdm-to-mvc" />
+    <SUITE FILE_PATH="coverage/pdm-to-mvc@run.coverage" NAME="run Coverage Results" MODIFIED="1446014526910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="pdm-to-mvc" />
     <SUITE FILE_PATH="coverage/pdm-to-mvc@hello.coverage" NAME="parse Coverage Results" MODIFIED="1438666782370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="pdm-to-mvc" />
     <SUITE FILE_PATH="coverage/pdm-to-mvc@config_helper.coverage" NAME="config_helper Coverage Results" MODIFIED="1446013705275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="pdm-to-mvc" />
   </component>
@@ -36,10 +37,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="run.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14432989">
+            <state vertical-scroll-proportion="-1.6969697">
               <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
               <folding />
             </state>
@@ -50,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/template/dao_impl.mp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="115" selection-start-line="77" selection-start-column="115" selection-end-line="77" selection-end-column="115" />
+              <caret line="77" column="93" selection-start-line="77" selection-start-column="93" selection-end-line="77" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -59,8 +60,8 @@
       <file leaf-file-name="dao.mp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/dao.mp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.212121">
-              <caret line="23" column="111" selection-start-line="23" selection-start-column="111" selection-end-line="23" selection-end-column="111" />
+            <state vertical-scroll-proportion="-4.6666665">
+              <caret line="20" column="36" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -74,6 +75,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-1.8064516">
               <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config_webclerk.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config_webclerk.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.18211383">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,11 +129,12 @@
         <option value="$PROJECT_DIR$/target/java/com/qindingtech/service/impl/AuthPermissionMapServiceImpl.java" />
         <option value="$PROJECT_DIR$/template/entity.mp" />
         <option value="$PROJECT_DIR$/template/dto.mp" />
-        <option value="$PROJECT_DIR$/template/dao.mp" />
         <option value="$PROJECT_DIR$/template/dao_impl.mp" />
         <option value="$PROJECT_DIR$/config_helper.rb" />
         <option value="$PROJECT_DIR$/config.yml" />
         <option value="$PROJECT_DIR$/run.rb" />
+        <option value="$PROJECT_DIR$/template/dao.mp" />
+        <option value="$PROJECT_DIR$/config_webclerk.yml" />
       </list>
     </option>
   </component>
@@ -464,7 +476,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446014090065</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="reformat dao">
+      <created>1446014159779</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1446014159779</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -718,18 +736,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/run.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8064516">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+        <state vertical-scroll-proportion="-1.6969697">
+          <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/dao.mp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.212121">
-          <caret line="23" column="111" selection-start-line="23" selection-start-column="111" selection-end-line="23" selection-end-column="111" />
+        <state vertical-scroll-proportion="-4.6666665">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -740,15 +758,23 @@
     <entry file="file://$PROJECT_DIR$/template/dao_impl.mp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="115" selection-start-line="77" selection-start-column="115" selection-end-line="77" selection-end-column="115" />
+          <caret line="77" column="93" selection-start-line="77" selection-start-column="93" selection-end-line="77" selection-end-column="93" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run.rb">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14432989">
-          <caret line="80" column="43" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
+        <state vertical-scroll-proportion="-1.8064516">
+          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config_webclerk.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18211383">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -22,5 +22,5 @@ public interface @@=$groupName=@@Dao {
     @@=$groupName.capitalizeFirst=@@ update@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler);
     @@=$groupName.capitalizeFirst=@@ saveOrUpdate@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler);
     void delete@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler);
-    void delete@@=$groupName.capitalizeFirst=@@(String entityId,String handler);
+    boolean delete@@=$groupName.capitalizeFirst=@@(String entityId,String handler);
 }
