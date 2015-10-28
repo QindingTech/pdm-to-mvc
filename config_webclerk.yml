@@ -1,0 +1,11 @@
+pdmPath: 'D:\Projects\QinDingTech\new-energy-management-platform\trunk\0002-Design\Database\platform\auth.pdm'
+entityFolder: 'D:\TODO\java\com\qindingtech\entity\'
+dtoFolder: 'D:\TODO\java\com\qindingtech\data\dto\'
+
+daoFolder: 'D:\TODO\java\com\qindingtech\dao\'
+daoImplFolder: 'D:\TODO\java\com\qindingtech\dao\impl\'
+serviceFolder: 'D:\TODO\java\com\qindingtech\service\'
+serviceImplFolder: 'D:\TODO\java\com\qindingtech\service\impl\'
+controllerFolder: 'D:\TODO\java\com\qindingtech\controller\'
+
+jspFolder: 'D:\TODO\views\'
