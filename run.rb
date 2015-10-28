@@ -1,19 +1,16 @@
 require 'carnelian/executor'
 require 'nokogiri'
-
+require 'yaml'
+# ×Ö·û´¦ÀíÀà
 class String
   def uncapitalize
     self[0, 1].downcase + self[1..-1]
   end
-end
 
-class String
   def capitalizeFirst
     self[0, 1].upcase + self[1..-1]
   end
-end
 
-class String
   def hyphen
     self.gsub(/::/, '/').
         gsub(/([A-Z]+)([A-Z][a-z])/, '\1-\2').
@@ -81,18 +78,19 @@ end
 
 $year = Time.now.year
 
-pdmPath = '/Users/justin/Documents/Projects/qindingtech/new-energy-management-platform/trunk/0002-Design/Database/platform/platform.pdm'
+cnf = YAML::load(File.open('config_webclerk.yml'))
 
-entityFolder = 'target/java/com/qindingtech/entity/'
-dtoFolder = 'target/java/com/qindingtech/data/dto/'
+pdmPath = cnf['pdmPath']
 
-daoFolder = 'target/java/com/qindingtech/dao/'
-daoImplFolder='target/java/com/qindingtech/dao/impl/'
-serviceFolder = 'target/java/com/qindingtech/service/'
-serviceImplFolder = 'target/java/com/qindingtech/service/impl/'
-controllerFolder = 'target/java/com/qindingtech/controller/'
+entityFolder = cnf['entityFolder']
+dtoFolder = cnf['dtoFolder']
 
-jspFolder = 'target/views/'
+daoFolder = cnf['daoFolder']
+daoImplFolder= cnf['daoImplFolder']
+serviceFolder = cnf['serviceFolder']
+serviceImplFolder = cnf['serviceImplFolder']
+controllerFolder = cnf['controllerFolder']
+jspFolder = cnf['jspFolder']
 
 
 # read powerdesigner pdm file

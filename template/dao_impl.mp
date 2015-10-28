@@ -24,10 +24,9 @@ import java.util.Date;
 public class @@=$groupName=@@DaoImpl extends BaseDaoImpl implements @@=$groupName=@@Dao{
 
     @Override
-    public @@=$groupName.capitalizeFirst=@@ save@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String siteId,String handler){
+    public @@=$groupName.capitalizeFirst=@@ save@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
         @@=$groupName.uncapitalize=@@.setVersion(1L);
         @@=$groupName.uncapitalize=@@.setDeleted(0L);
-        @@=$groupName.uncapitalize=@@.setSiteId(siteId);
         @@=$groupName.uncapitalize=@@.setUpdatedBy(handler);
         @@=$groupName.uncapitalize=@@.setUpdatedAt(new Date());
         this.saveEntity(@@=$groupName.uncapitalize=@@);
@@ -36,10 +35,9 @@ public class @@=$groupName=@@DaoImpl extends BaseDaoImpl implements @@=$groupNam
     }
 
     @Override
-    public @@=$groupName.capitalizeFirst=@@ update@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String siteId,String handler){
+    public @@=$groupName.capitalizeFirst=@@ update@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
         @@=$groupName.uncapitalize=@@.setVersion(@@=$groupName.uncapitalize=@@.getVersion()+1L);
         @@=$groupName.uncapitalize=@@.setDeleted(0L);
-        @@=$groupName.uncapitalize=@@.setSiteId(siteId);
         @@=$groupName.uncapitalize=@@.setUpdatedBy(handler);
         @@=$groupName.uncapitalize=@@.setUpdatedAt(new Date());
         this.updateEntity(@@=$groupName.uncapitalize=@@);
@@ -48,13 +46,13 @@ public class @@=$groupName=@@DaoImpl extends BaseDaoImpl implements @@=$groupNam
     }
 
     @Override
-    public @@=$groupName.capitalizeFirst=@@ saveOrUpdate@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String siteId,String handler){
+    public @@=$groupName.capitalizeFirst=@@ saveOrUpdate@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
             if(@@=$groupName.uncapitalize=@@.getId()==null||@@=$groupName.uncapitalize=@@.getId().trim().isEmpty()){
                 //new
-                return this.save@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@,siteId,handler);
+                return this.save@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@,handler);
             }else{
                 //update
-                return this.update@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@,siteId,handler);
+                return this.update@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@,handler);
             }
         }
 
@@ -62,14 +60,27 @@ public class @@=$groupName=@@DaoImpl extends BaseDaoImpl implements @@=$groupNam
      * change deleted flag to 1.
      */
     @Override
-    public void delete@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String siteId,String handler){
+    public void delete@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
         @@=$groupName.uncapitalize=@@.setDeleted(1L);
         @@=$groupName.uncapitalize=@@.setVersion(@@=$groupName.uncapitalize=@@.getVersion()+1L);
-        @@=$groupName.uncapitalize=@@.setSiteId(siteId);
         @@=$groupName.uncapitalize=@@.setUpdatedBy(handler);
         @@=$groupName.uncapitalize=@@.setUpdatedAt(new Date());
         this.updateEntity(@@=$groupName.uncapitalize=@@);
         this.saveArc(@@=$groupName.uncapitalize=@@);
+    }
+
+    /**
+     * change deleted flag to 1.
+     */
+    @Override
+    public boolean delete@@=$groupName.capitalizeFirst=@@(String id, String handler) {
+            if(id==null||id.trim().isEmpty()){
+                @@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@ =getEntityById(@@=$groupName.capitalizeFirst=@@.class,id);
+                if(@@=$groupName.uncapitalize=@@!=null){
+                    delete@@=$groupName.capitalizeFirst=@@(@@=$groupName.uncapitalize=@@,handler);
+                    return true;
+                }
+            }return false;
     }
 
     protected void saveArc(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@){
