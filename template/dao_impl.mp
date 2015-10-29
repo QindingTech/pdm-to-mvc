@@ -36,7 +36,7 @@ public class @@=$groupName=@@DaoImpl extends BaseDaoImpl implements @@=$groupNam
 
     @Override
     public @@=$groupName.capitalizeFirst=@@ update@@=$groupName.capitalizeFirst=@@(@@=$groupName.capitalizeFirst=@@ @@=$groupName.uncapitalize=@@,String handler){
-        @@=$groupName.uncapitalize=@@.setVersion(@@=$groupName.uncapitalize=@@.getVersion()+1L);
+        @@=$groupName.uncapitalize=@@.setVersion(getLastVersion(@@=$groupName.capitalizeFirst=@@.class,@@=$groupName.uncapitalize=@@.getId()));
         @@=$groupName.uncapitalize=@@.setDeleted(0L);
         @@=$groupName.uncapitalize=@@.setUpdatedBy(handler);
         @@=$groupName.uncapitalize=@@.setUpdatedAt(new Date());
