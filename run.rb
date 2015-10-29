@@ -3,7 +3,7 @@ require 'nokogiri'
 require 'yaml'
 require_relative 'pdm_helper'
 
-# ×Ö·û´¦ÀíÀà
+# ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½
 class String
   def uncapitalize
     self[0, 1].downcase + self[1..-1]
@@ -20,7 +20,7 @@ class String
   end
 end
 
-# Èô²»´æÔÚµÄ»°Ôò´´½¨Ä¿Â¼
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÚµÄ»ï¿½ï¿½ò´´½ï¿½Ä¿Â¼
 def createDir(path)
   dirname = File.dirname(path)
   tokens = dirname.split(/[\/\\]/) # don't forget the backslash for Windows! And to escape both "\" and "/"
@@ -48,6 +48,7 @@ serviceImplFolder = cnf['serviceImplFolder']
 controllerFolder = cnf['controllerFolder']
 jspFolder = cnf['jspFolder']
 
+
 def processTemplates(pdmFile, entityFolder, dtoFolder,daoFolder,daoImplFolder,serviceFolder,serviceImplFolder,controllerFolder,jspFolder)
   createDir(entityFolder+'stub')
   createDir(dtoFolder+'stub')
@@ -59,6 +60,11 @@ def processTemplates(pdmFile, entityFolder, dtoFolder,daoFolder,daoImplFolder,se
   createDir(controllerFolder+'stub')
   createDir(jspFolder+'stub')
 
+  # $groupNames
+  # $entityName
+  # $tableName
+  # $columnArray
+  # $entityComment
 
   @doc = Nokogiri::XML(File.read(pdmFile))
   tables = @doc.xpath('//c:Tables/o:Table')
