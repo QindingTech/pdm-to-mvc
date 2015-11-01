@@ -3,7 +3,22 @@ require 'nokogiri'
 require 'yaml'
 require_relative 'pdm_helper'
 
-# �ַ�����
+
+cnf = YAML::load(File.open('config_webclerk.yml'))
+
+pdmFiles = cnf['pdmFiles']
+puts pdmFiles
+
+entityFolder = cnf['entityFolder']
+dtoFolder = cnf['dtoFolder']
+daoFolder = cnf['daoFolder']
+daoImplFolder= cnf['daoImplFolder']
+serviceFolder = cnf['serviceFolder']
+serviceImplFolder = cnf['serviceImplFolder']
+controllerFolder = cnf['controllerFolder']
+jspFolder = cnf['jspFolder']
+
+# String helper
 class String
   def uncapitalize
     self[0, 1].downcase + self[1..-1]
@@ -20,7 +35,7 @@ class String
   end
 end
 
-# �������ڵĻ��򴴽�Ŀ¼
+# Create Folder
 def createDir(path)
   dirname = File.dirname(path)
   tokens = dirname.split(/[\/\\]/) # don't forget the backslash for Windows! And to escape both "\" and "/"
@@ -34,19 +49,6 @@ end
 
 $year = Time.now.year
 
-cnf = YAML::load(File.open('config_webclerk.yml'))
-
-pdmFiles = cnf['pdmFiles']
-puts pdmFiles
-
-entityFolder = cnf['entityFolder']
-dtoFolder = cnf['dtoFolder']
-daoFolder = cnf['daoFolder']
-daoImplFolder= cnf['daoImplFolder']
-serviceFolder = cnf['serviceFolder']
-serviceImplFolder = cnf['serviceImplFolder']
-controllerFolder = cnf['controllerFolder']
-jspFolder = cnf['jspFolder']
 
 
 def processTemplates(pdmFile, entityFolder, dtoFolder,daoFolder,daoImplFolder,serviceFolder,serviceImplFolder,controllerFolder,jspFolder)

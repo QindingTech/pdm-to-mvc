@@ -7,9 +7,11 @@
 */
 package com.qindingtech.amp.dto;
 
+import com.qindingtech.amp.common.CoreMessageCode;
 import com.qindingtech.amp.entity.*;
 import com.qindingtech.amp.dto.BaseDto;
-
+import com.qindingtech.amp.data.MessageInfo;
+import com.qindingtech.amp.tools.CommonUtility;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -38,6 +40,7 @@ public class @@=$entityName=@@Dto extends BaseDto implements Serializable{
 @@> end
 
     public static @@=$entityName=@@Dto entity2dto(@@=$entityName=@@ entity){
+        if (entity==null) return null;
         @@=$entityName=@@Dto @@=$entityName.uncapitalize=@@Dto = new @@=$entityName=@@Dto();
 @@> for attribute in $columnArray
         @@=$entityName.uncapitalize=@@Dto.set@@=attribute.name.capitalizeFirst=@@(entity.get@@=attribute.name.capitalizeFirst=@@());
@@ -47,13 +50,18 @@ public class @@=$entityName=@@Dto extends BaseDto implements Serializable{
 
     public static List<@@=$entityName=@@Dto> entity2dto(List<@@=$entityName=@@> entities){
         List<@@=$entityName=@@Dto> list = new ArrayList<>();
-        for(@@=$entityName=@@ entity:entities){
+        if (CommonUtility.isEmpty(entities)) {
+            return list;
+        } else {
+            for(@@=$entityName=@@ entity:entities){
             list.add(entity2dto(entity));
+            }
         }
         return list;
     }
 
     public static @@=$entityName=@@ dto2entity(@@=$entityName=@@Dto dto){
+            if(dto==null) return null;
             @@=$entityName=@@ @@=$entityName.uncapitalize=@@ = new @@=$entityName=@@();
 @@> for attribute in $columnArray
             @@=$entityName.uncapitalize=@@.set@@=attribute.name.capitalizeFirst=@@(dto.get@@=attribute.name.capitalizeFirst=@@());
@@ -63,9 +71,23 @@ public class @@=$entityName=@@Dto extends BaseDto implements Serializable{
 
     public static List<@@=$entityName=@@> dto2entity(List<@@=$entityName=@@Dto> dtos){
         List<@@=$entityName=@@> list = new ArrayList<>();
-        for(@@=$entityName=@@Dto dto:dtos){
-            list.add(dto2entity(dto));
+        if (CommonUtility.isEmpty(dtos)) {
+                    return list;
+        } else {
+            for(@@=$entityName=@@Dto dto:dtos){
+                list.add(dto2entity(dto));
+            }
         }
         return list;
+    }
+
+    public static List<MessageInfo> checkValid(@@=$entityName=@@Dto dto) {
+        List<MessageInfo> result = new ArrayList<>();
+        if (dto == null) {
+            result.add(new MessageInfo(CoreMessageCode.ERROR_INPUT_PARA_EMPTY, null));
+            return result;
+        }
+        //TODO: Add customer check here
+        return result;
     }
 }

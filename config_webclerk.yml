@@ -1,4 +1,4 @@
-pdmPath: 'D:\Projects\QinDingTech\new-energy-management-platform\trunk\0002-Design\Database\platform\platform.pdm'
+#pdmPath: 'D:\Projects\QinDingTech\new-energy-management-platform\trunk\0002-Design\Database\platform\platform.pdm'
 entityFolder: 'D:\TODO\java\com\qindingtech\entity\'
 dtoFolder: 'D:\TODO\java\com\qindingtech\data\dto\'
 
