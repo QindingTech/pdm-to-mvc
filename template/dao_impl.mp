@@ -7,7 +7,7 @@
 */
 package com.qindingtech.amp.core.dao.impl;
 
-import com.qindingtech.amp.core.tools.CommonUtility;
+import com.qindingtech.amp.tools.CommonUtility;
 import com.qindingtech.amp.entity.*;
 import com.qindingtech.amp.core.dao.*;
 import org.springframework.stereotype.Repository;

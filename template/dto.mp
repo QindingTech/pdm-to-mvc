@@ -84,7 +84,7 @@ public class @@=$entityName=@@Dto extends BaseDto implements Serializable{
     public static List<MessageInfo> checkValid(@@=$entityName=@@Dto dto) {
         List<MessageInfo> result = new ArrayList<>();
         if (dto == null) {
-            result.add(new MessageInfo(CoreMessageCode.ERROR_INPUT_PARA_EMPTY, null));
+            result.add(new MessageInfo(CoreMessageCode.ERROR_INPUT_PARA_EMPTY));
             return result;
         }
         //TODO: Add customer check here
