@@ -12,6 +12,7 @@ jspFolder: 'D:\TODO\views\'
 
 pdmFiles:
   #- 'D:\Projects\QinDingTech\new-energy-management-platform\trunk\0002-Design\Database\platform\platform.pdm'
-  #- 'D:\Projects\QinDingTech\new-energy-management-platform\trunk\0002-Design\Database\platform\auth.pdm'
+  - 'D:\Projects\QinDingTech\new-energy-management-platform\trunk\0002-Design\Database\platform\auth.pdm'
   #- 'D:\Projects\QinDingTech\new-energy-management-platform\trunk\0002-Design\Database\platform\storage.pdm'
-  - 'D:\Projects\QinDingTech\new-energy-management-platform\trunk\0002-Design\Database\platform\service.pdm'
+  #- 'D:\Projects\QinDingTech\new-energy-management-platform\trunk\0002-Design\Database\platform\service.pdm'
+  #- 'D:\Projects\QinDingTech\new-energy-management-platform\trunk\0002-Design\Database\platform\infr.pdm'
