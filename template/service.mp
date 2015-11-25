@@ -5,7 +5,7 @@
 * Qindingtech PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
 *
 */
-package com.qindingtech.amp.core.service;
+package com.qindingtech.core.service;
 
 import java.util.List;
 import java.util.Map;

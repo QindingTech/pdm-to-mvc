@@ -5,11 +5,11 @@
 * Qindingtech PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
 *
 */
-package com.qindingtech.amp.core.dao.impl;
+package com.qindingtech.core.dao.impl;
 
-import com.qindingtech.amp.tools.CommonUtility;
-import com.qindingtech.amp.entity.*;
-import com.qindingtech.amp.core.dao.*;
+import com.qindingtech.tools.CommonUtility;
+import com.qindingtech.entity.*;
+import com.qindingtech.core.dao.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

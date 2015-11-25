@@ -5,7 +5,7 @@
 * Qindingtech PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
 *
 */
-package com.qindingtech.amp.entity;
+package com.qindingtech.entity;
 
 import org.hibernate.annotations.GenericGenerator;
 

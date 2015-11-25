@@ -5,9 +5,9 @@
 * Qindingtech PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
 *
 */
-package com.qindingtech.amp.core.dao;
+package com.qindingtech.core.dao;
 
-import com.qindingtech.amp.entity.*;
+import com.qindingtech.entity.*;
 
 import java.util.List;
 import java.util.Map;

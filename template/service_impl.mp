@@ -5,10 +5,10 @@
 * Qindingtech PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
 *
 */
-package com.qindingtech.amp.core.service.impl;
+package com.qindingtech.core.service.impl;
 
-import com.qindingtech.amp.core.dao.*;
-import com.qindingtech.amp.core.service.*;
+import com.qindingtech.core.dao.*;
+import com.qindingtech.core.service.*;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

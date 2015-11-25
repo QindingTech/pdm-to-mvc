@@ -5,13 +5,13 @@
 * Qindingtech PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
 *
 */
-package com.qindingtech.amp.dto;
+package com.qindingtech.dto;
 
-import com.qindingtech.amp.common.CoreMessageCode;
-import com.qindingtech.amp.entity.*;
-import com.qindingtech.amp.dto.BaseDto;
-import com.qindingtech.amp.data.MessageInfo;
-import com.qindingtech.amp.tools.CommonUtility;
+import com.qindingtech.common.CoreMessageCode;
+import com.qindingtech.entity.*;
+import com.qindingtech.dto.BaseDto;
+import com.qindingtech.data.MessageInfo;
+import com.qindingtech.tools.CommonUtility;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
