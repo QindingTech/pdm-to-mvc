@@ -1,10 +1,13 @@
+require 'rubygems'
+require 'bundler/setup'
+
 require 'carnelian/executor'
 require 'nokogiri'
 require 'yaml'
 require_relative 'pdm_helper'
 
 
-cnf = YAML::load(File.open('config_webclerk.yml'))
+cnf = YAML::load(File.open('config_justin.yml'))
 
 pdmFiles = cnf['pdmFiles']
 puts pdmFiles
